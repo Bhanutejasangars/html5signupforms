@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>singup form</title>
+    <style>
+        label{
+          width: 150px;
+            display: inline-block;
+        }
+       </style>
+</head>
+<body>
+    <h1>Signup form Example</h1>
+    <form action="formsresults.html" method="GET">
+        <div>
+        <label  for="Fullname">Fullname*:</label>
+        <input type="text" name="firstname" id="firstname" placeholder="firstname" required>
+         <input type="text" name="lastname" id="lastname" placeholder="lastname">
+        </div>
+        <div>
+        <label>Organization:</label>
+        <input type="text" name="Organization" id="Organization" >
+        </div>
+        <div>
+            <label for="email">Email address*:</label>
+            <input type="email" name="email" id="email" required >
+        </div>
+        <div>
+            <label for="workplace">Workplace:</label>
+                <input type="text" name="workplace" id="workplace">
+         </div>
+         <div>
+        <label for="Homeplace">Homeplace:</label>
+        <input type="text"  name="Homeplace"  id="Homeplace">
+         </div>
+         <div>
+             <label for="Cellphone">Cellphone:</label>
+            <input type="number" name="Cellphone" id="Cellphone" >
+         </div>
+         <div>
+             <label>Fax:</label>
+         <input type="text" id="Fax">
+            </div>
+            <div>
+                <label>Address 1*:</label>
+                <input type="text" id="add1" placeholder="Primary" required>
+            </div>
+            <div>
+                <label>Address 2:</label>
+                <input type="text" id="add2" placeholder="Secondary">
+            </div>
+            <div>
+                <label>City*:</label>
+            <input type="text" id="City" required>
+            </div>
+            <div>
+                <label>state/province:</label>
+                <input type="text" id="state" >
+            </div>
+            <div>
+                <label>Zip/postalcode:</label>
+            <input type="number" id="zip">
+            </div>
+            <div>
+                <label>Country*:</label>
+                <input type="text" id="country" required>
+            </div>
+          <div>  
+     <label>*-required fields</label>   <button>Submit</button> 
+    </div>
+    </form>
+</body>
+</html>
