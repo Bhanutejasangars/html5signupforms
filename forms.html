@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>singup form</title>
+    <title>singupform</title>
     <style>
         label{
           width: 150px;
@@ -22,12 +22,13 @@
              outline: none;
             transition: .2s;
         }
+    
         
        </style>
 </head>
 <body>
     <h1>Signup form Example</h1>
-    <form>
+    <form id="form">
         <div>
         <label  for="Fullname">Fullname*:</label>
         <input type="text" name="firstname" id="firstname" placeholder="firstname" required>
@@ -50,9 +51,10 @@
         <input type="text"  name="Homeplace"  id="Homeplace">
          </div>
          <div>
-             <label for="Cellphone">Cellphone:</label>
-            <input type="number" name="Cellphone" id="Cellphone" >
+             <label for="Cellphone">Cellphone*:</label>
+            <input type="number" name="Cellphone" id="Cellphone"  required>
          </div>
+         <div id="Warning"></div>
          <div>
              <label>Fax:</label>
          <input type="text" id="Fax">
@@ -67,7 +69,13 @@
             </div>
             <div>
                 <label>City*:</label>
-            <input type="text" id="City" required>
+            <select id="City">
+                <option>SELECT THE INPUT FROM DROP BOX</option>
+                <option id="mncl">MANCHERIAL</option>
+                <option id="hyd">HYDERABAD</option>
+                <option id="nzb">NIZAMBAD</option>
+                <option id="adb">ADILABAD</option>
+            </select>
             </div>
             <div>
                 <label>state/province:</label>
@@ -82,7 +90,7 @@
                 <input type="text" id="country" required>
             </div>
           <div>  
-     <label>*-required fields</label>   <button onclick="x()">Submit</button> 
+     <label>*-required fields</label>   <button id="submit" onclick="y()">Submit</button> 
     </div>
     </form>
     <script src="forms.js"></script>
