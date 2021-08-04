@@ -68,19 +68,28 @@
                 <input type="text" id="add2" placeholder="Secondary">
             </div>
             <div>
-                <label>City*:</label>
-            <select id="City">
-                <option>SELECT THE INPUT FROM DROP BOX</option>
-                <option id="mncl">MANCHERIAL</option>
-                <option id="hyd">HYDERABAD</option>
-                <option id="nzb">NIZAMBAD</option>
-                <option id="adb">ADILABAD</option>
+                <label>state/province:</label>
+            <select id="State"  onchange="javascript: dropdown(this.Options[this.selectedIndex].value)">
+                <option id="">select state </option>
+          <option id="Telangana">Telangana</option>
+          <option id="Tamilnadu">Tamilnadu</option>
+          <option id="Maharastra">Maharastra</option>
             </select>
             </div>
             <div>
-                <label>state/province:</label>
-                <input type="text" id="state" >
-            </div>
+                <label>City*:</label>
+      <select id="City" required>
+          <option id="">select city</option>
+          <option id="mncl">MANCHERIAL</option>
+          <option id="hyd">HYDERABAD</option>
+          <option id="nzb">NIZAMBAD</option>
+          <option id="adb">ADILABAD</option>
+          <option id="mum">MUMBAI</option>
+          <option id="che">CHENNAI</option>
+      </select>
+        
+    
+    </div>
             <div>
                 <label>Zip/postalcode:</label>
             <input type="number" id="zip">
