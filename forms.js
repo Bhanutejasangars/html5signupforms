@@ -1,5 +1,5 @@
 
-function y() {   
+function onSubmit() {   
 var firstname=document.getElementById("firstname").value;
 var email=document.getElementById("email").value;
 var add1=document.getElementById("add1").value;
