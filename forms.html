@@ -5,26 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>singupform</title>
-    <style>
-        label{
-          width: 150px;
-          height: 30px;
-            display: inline-block;
-        }
-        input:focus{
-            border-color:  dodgerblue;
-            box-shadow: 0 0 8px 0 dodgerblue ;
-        }  
-        input{
-            border: 2px solid #aaa;
-            border-radius: 4px;
-        
-             outline: none;
-            transition: .2s;
-        }
-    
-        
-       </style>
+    <link rel="stylesheet" href="forms.css">
 </head>
 <body>
     <h1>Signup form Example</h1>
@@ -68,19 +49,23 @@
                 <input type="text" id="add2" placeholder="Secondary">
             </div>
             <div>
-                <label>City*:</label>
-            <select id="City">
-                <option>SELECT THE INPUT FROM DROP BOX</option>
-                <option id="mncl">MANCHERIAL</option>
-                <option id="hyd">HYDERABAD</option>
-                <option id="nzb">NIZAMBAD</option>
-                <option id="adb">ADILABAD</option>
+                <label>state/province:</label>
+            <select id="State" onchange="dropdownfunction()" >
+                <option id="">select state </option>
+                <option id="Telangana">Telangana</option>
+                <option id="Tamilnadu">Tamilnadu</option>
+                <option id="Karnataka">Karnataka</option>
             </select>
             </div>
             <div>
-                <label>state/province:</label>
-                <input type="text" id="state" >
-            </div>
+                <label>City:</label>
+      <select id="City" >
+          <option id="" >select city</option>
+        
+      </select>
+        
+    
+    </div>
             <div>
                 <label>Zip/postalcode:</label>
             <input type="number" id="zip">
@@ -90,7 +75,7 @@
                 <input type="text" id="country" required>
             </div>
           <div>  
-     <label>*-required fields</label>   <button id="submit" onclick="y()">Submit</button> 
+     <label>*-required fields</label>   <button id="submit" onclick="onSubmit()">Submit</button> 
     </div>
     </form>
     <script src="forms.js"></script>

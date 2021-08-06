@@ -1,5 +1,5 @@
 
-function y() {   
+function onSubmit() {   
 var firstname=document.getElementById("firstname").value;
 var email=document.getElementById("email").value;
 var add1=document.getElementById("add1").value;
@@ -8,7 +8,7 @@ var country=document.getElementById("country").value;
 var Cellphone=document.getElementById("Cellphone").value;
 var popup=[];
 
-console.log(Cellphone.length)
+
   if( firstname==""){
        document.getElementById("firstname").style.borderColor = "red";
    }  else{
@@ -51,7 +51,24 @@ console.log(Cellphone.length)
     document.getElementById("Warning").innerText=popup.join(',')
     document.getElementById("Warning").style.color="red"
     document.getElementById("Cellphone").style.borderColor ="red";
-}
 
+   
+    }
+    
 
-
+    function dropdownfunction(){
+        var stateInput=document.getElementById("State").value;
+      var array=[]
+        if(stateInput==="Telangana"){
+         var array=["hyderabad","mancherial","nizambad","adilabad"];
+        }else if(stateInput==="Tamilnadu"){
+            var array=["chennai","coimbatore"];
+        }else if(stateInput==="Karnataka"){
+           var array=["bangalore"];
+        }
+        var string="";
+        for(i=0;i<array.length;i++){
+            string=string+"<option value="+array[i]+">"+array[i]+"</option>";
+        }
+        document.getElementById("City").innerHTML=string;
+    }
