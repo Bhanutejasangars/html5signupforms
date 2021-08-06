@@ -5,26 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>singupform</title>
-    <style>
-        label{
-          width: 150px;
-          height: 30px;
-            display: inline-block;
-        }
-        input:focus{
-            border-color:  dodgerblue;
-            box-shadow: 0 0 8px 0 dodgerblue ;
-        }  
-        input{
-            border: 2px solid #aaa;
-            border-radius: 4px;
-        
-             outline: none;
-            transition: .2s;
-        }
-    
-        
-       </style>
+    <link rel="stylesheet" href="forms.css">
 </head>
 <body>
     <h1>Signup form Example</h1>
@@ -69,23 +50,18 @@
             </div>
             <div>
                 <label>state/province:</label>
-            <select id="State"  onchange="javascript: dropdown(this.Options[this.selectedIndex].value)">
+            <select id="State" onchange="dropdownfunction()" >
                 <option id="">select state </option>
-          <option id="Telangana">Telangana</option>
-          <option id="Tamilnadu">Tamilnadu</option>
-          <option id="Maharastra">Maharastra</option>
+                <option id="Telangana">Telangana</option>
+                <option id="Tamilnadu">Tamilnadu</option>
+                <option id="Karnataka">Karnataka</option>
             </select>
             </div>
             <div>
-                <label>City*:</label>
-      <select id="City" required>
-          <option id="">select city</option>
-          <option id="mncl">MANCHERIAL</option>
-          <option id="hyd">HYDERABAD</option>
-          <option id="nzb">NIZAMBAD</option>
-          <option id="adb">ADILABAD</option>
-          <option id="mum">MUMBAI</option>
-          <option id="che">CHENNAI</option>
+                <label>City:</label>
+      <select id="City" >
+          <option id="" >select city</option>
+        
       </select>
         
     

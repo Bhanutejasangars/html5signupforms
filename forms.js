@@ -51,31 +51,24 @@ var popup=[];
     document.getElementById("Warning").innerText=popup.join(',')
     document.getElementById("Warning").style.color="red"
     document.getElementById("Cellphone").style.borderColor ="red";
-}
 
-function dropdown(listindex){
-    document.getElementById("City").options.length=0;
-    document.write('<select id="City"><option id="">select city</option></select>') 
-    switch(listindex){
-        case "Telangana":
-    document.getElementById("City").options[0]=new Option("please select city","");
-    document.getElementById("City").options[1]=new Option("MANCHERIAL","MANCHERIAL");
-    document.getElementById("City").options[2]=new Option("HYDERABAD","HYDERABAD");
-    document.getElementById("City").options[3]=new Option("NIZAMBAD","NIZAMBAD");
-    document.getElementById("City").options[4]=new Option("ADILABAD","ADILABAD");
-       break;
-       case "Tamilnadu":
-    document.getElementById("City").options[0]=new Option("please select city","");
-    document.getElementById("City").options[1]=new Option("CHENNAI","CHENNAI");
-    document.getElementById("City").options[2]=new Option("COIAMBATORE","COIAMBATORE");
-    break;
-    case "Maharastra":
-        document.getElementById("City").options[0]=new Option("please select city","");
-        document.getElementById("City").options[0]=new Option("MUMBAI","MUMBAI");
-        document.getElementById("City").options[0]=new Option("PUNE","PUNE");
-        break;
+   
     }
-    return true;
-}
+    
 
- 
+    function dropdownfunction(){
+        var stateInput=document.getElementById("State").value;
+      var array=[]
+        if(stateInput==="Telangana"){
+         var array=["hyderabad","mancherial","nizambad","adilabad"];
+        }else if(stateInput==="Tamilnadu"){
+            var array=["chennai","coimbatore"];
+        }else if(stateInput==="Karnataka"){
+           var array=["bangalore"];
+        }
+        var string="";
+        for(i=0;i<array.length;i++){
+            string=string+"<option value="+array[i]+">"+array[i]+"</option>";
+        }
+        document.getElementById("City").innerHTML=string;
+    }

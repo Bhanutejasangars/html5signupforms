@@ -1,0 +1,16 @@
+label{
+    width: 150px;
+    height: 30px;
+      display: inline-block;
+  }
+  input:focus{
+      border-color:  dodgerblue;
+      box-shadow: 0 0 8px 0 dodgerblue ;
+  }  
+  input{
+      border: 2px solid #aaa;
+      border-radius: 4px;
+  
+       outline: none;
+      transition: .2s;
+  }
